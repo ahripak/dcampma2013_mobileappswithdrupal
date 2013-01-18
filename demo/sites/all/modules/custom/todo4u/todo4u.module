@@ -1,0 +1,15 @@
+<?php
+/**
+ * @file
+ * Code for the todo4u feature.
+ */
+
+include_once 'todo4u.features.inc';
+
+/**
+ * hook_init().
+ */
+function todo4u_init() {
+  drupal_add_js(drupal_get_path('module', 'todo4u') . '/todo4u.js');
+  drupal_add_css(drupal_get_path('module', 'todo4u') . '/todo4u.css');
+}
