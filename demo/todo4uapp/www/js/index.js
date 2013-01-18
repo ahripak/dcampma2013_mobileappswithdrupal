@@ -55,7 +55,7 @@
 	var nodes = data.nodes;
 	$.each(nodes, function(index, node_container) {
 	  var node = node_container.node;
-	  var check_icon = (node.field_complete != "0") ? "check" : "false";
+	  var check_icon = (node.field_complete == "1") ? "check" : "false";
 	  console.log(node);
 	  $('#main_list').append(
 	    $("<li></li>").attr({'data-icon' : check_icon})
@@ -69,9 +69,9 @@
 	// Asign click listeners
 	$('#main_list li').click(function() {
 
-	  // Prepare the node object
+	  // Prepare the node object with the opposite of current checked value
 	  var node = { node : {
-	    field_complete : { und : [{value : "1"}]},
+	    field_complete : { und : [{value : ($(this).attr('data-icon') == 'check') ? "0" : "1"}]},
 	    type : 'todo',
 	    title : $(this).find('.todo-item').text(),
 	    language : 'und'
