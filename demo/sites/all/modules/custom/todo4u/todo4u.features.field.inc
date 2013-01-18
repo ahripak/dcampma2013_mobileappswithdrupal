@@ -18,31 +18,30 @@ function todo4u_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_complete',
-      'foreign keys' => array(),
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
       'indexes' => array(
-        'value' => array(
-          0 => 'value',
+        'format' => array(
+          0 => 'format',
         ),
       ),
       'locked' => '0',
-      'module' => 'list',
+      'module' => 'text',
       'settings' => array(
-        'allowed_values' => array(
-          0 => '',
-          1 => '',
-        ),
-        'allowed_values_function' => '',
+        'max_length' => '1',
       ),
       'translatable' => '0',
-      'type' => 'list_boolean',
+      'type' => 'text',
     ),
     'field_instance' => array(
       'bundle' => 'todo',
-      'default_value' => array(
-        0 => array(
-          'value' => 0,
-        ),
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -50,10 +49,10 @@ function todo4u_field_default_fields() {
           'label' => 'inline',
           'module' => 'editablefields',
           'settings' => array(
-            'click_to_edit' => FALSE,
+            'click_to_edit' => 0,
             'click_to_edit_style' => 'button',
             'empty_text' => '',
-            'fallback_format' => NULL,
+            'fallback_format' => 'text_plain',
             'fallback_settings' => array(),
           ),
           'type' => 'editable',
@@ -71,15 +70,16 @@ function todo4u_field_default_fields() {
       'label' => 'complete',
       'required' => 0,
       'settings' => array(
+        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'options',
+        'module' => 'text',
         'settings' => array(
-          'display_label' => 0,
+          'size' => '60',
         ),
-        'type' => 'options_onoff',
+        'type' => 'text_textfield',
         'weight' => '-4',
       ),
     ),

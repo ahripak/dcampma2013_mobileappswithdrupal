@@ -133,6 +133,7 @@ function todo4u_views_default_views() {
   $handler->display->display_options['fields']['field_complete']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_complete']['alter']['text'] = '[field_complete-value]';
   $handler->display->display_options['fields']['field_complete']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_complete']['type'] = 'list_default';
   $handler->display->display_options['fields']['field_complete']['settings'] = array(
     'click_to_edit' => 0,
     'click_to_edit_style' => 'button',
