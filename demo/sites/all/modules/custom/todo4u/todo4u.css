@@ -1,0 +1,75 @@
+@import url("http://fonts.googleapis.com/css?family=PT+Sans:400,400italic|Sansita+One");
+
+body {
+  background:#DED4B9;
+  font-family: 'PT Sans', sans-serif;
+}
+
+#header,
+#breadcrumb {
+  display:none;
+}
+
+h1.title {
+  margin: 0;
+  color: #46433A;
+  font-size:2.5em;
+  background:rgba(255,255,255,.2);
+  text-align: center;
+  padding: 10px 0 ;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  box-shadow: 0 2px 0 #CE534D, 0 3px 0 #EFE9D9, 0 5px 0 #64B6B1;
+  font-family: 'Sansita One', cursive;
+}
+
+.front .section {
+  margin:0;
+}
+
+#page-wrapper {
+  width:500px;
+  margin:75px auto;
+  background:#EFE9D9;
+  border-radius:6px;
+}
+
+.region-content {
+  padding:10px;
+}
+
+.node-todo {
+  clear:both;
+  overflow:hidden;
+}
+
+.node-todo h2 {
+  width:440px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  float:left;
+}
+
+.node-todo h2 a:link,
+.node-todo h2 a:visited {
+  text-decoration:none;
+  font-weight:400;
+  color:#64B6B1;
+}
+
+.node-todo .content {
+  width:40px;
+  float:left;
+}
+
+.node-todo .field-name-field-complete {
+  margin-top:23px;
+}
+
+.view-todo .views-row {
+  border-bottom:1px dashed rgba(206, 83, 77, .4);
+}
+
+.view-todo .views-row.views-row-last {
+  border:0;
+}
